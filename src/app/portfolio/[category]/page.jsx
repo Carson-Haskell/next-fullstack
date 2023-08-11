@@ -19,7 +19,12 @@ function Category({ params }) {
           <Button text="See More" url="#" />
         </div>
         <div className={styles.imgContainer}>
-          <Image src="/contact.png" fill={true} alt="" className={styles.img} />
+          <Image
+            src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            fill={true}
+            alt=""
+            className={styles.img}
+          />
         </div>
       </div>
       <div className={styles.item}>
@@ -34,7 +39,32 @@ function Category({ params }) {
           <Button text="See More" url="#" />
         </div>
         <div className={styles.imgContainer}>
-          <Image src="/contact.png" fill={true} alt="" className={styles.img} />
+          <Image
+            src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            fill={true}
+            alt=""
+            className={styles.img}
+          />
+        </div>
+      </div>
+      <div className={styles.item}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>Item 3</h1>
+          <p className={styles.description}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            ratione minima tempore saepe corrupti perspiciatis nam nemo quia
+            quaerat amet pariatur, doloribus rem veniam esse blanditiis cum.
+            Nemo, nulla quae.
+          </p>
+          <Button text="See More" url="#" />
+        </div>
+        <div className={styles.imgContainer}>
+          <Image
+            src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            fill={true}
+            alt=""
+            className={styles.img}
+          />
         </div>
       </div>
     </div>
