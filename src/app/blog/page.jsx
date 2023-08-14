@@ -2,25 +2,14 @@ import React from 'react';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-
-async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts', {
-    cache: 'no-store',
-  });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
+import getPosts from '@/lib/getPosts';
 
 async function Blog() {
-  const data = await getData();
+  const posts = await getPosts();
 
   return (
     <div>
-      {data.map((item) => (
+      {posts.map((item) => (
         <Link
           key={item._id}
           href={`/blog/${item._id}`}

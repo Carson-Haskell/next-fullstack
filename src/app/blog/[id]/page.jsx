@@ -1,22 +1,19 @@
 import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import getPost from '@/lib/getPost';
 
-async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-    cache: 'no-store',
-  });
+export async function generateMetadata({ params }) {
+  const post = await getPost(params.id);
 
-  if (!res.ok) {
-    return notFound();
-  }
-
-  return res.json();
+  return {
+    title: post.title,
+    description: post.description,
+  };
 }
 
 async function BlogPost({ params }) {
-  const blog = await getData(params.id);
+  const blog = await getPost(params.id);
 
   return (
     <div>
